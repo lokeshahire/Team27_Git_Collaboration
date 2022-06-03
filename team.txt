@@ -4,11 +4,11 @@ Team Name : Team27_Git_Collaboration
 
 Team Number : 27
 
-Team Member : Lokesh Ahire         ---> Student 1
-              Vivek Kumar Mishra   ---> Student 2
-              Deepak Sharma        ---> Student 3
-              Ankit Sharma         ---> Student 4
-              Shashank Srivastava  ---> Student 5
+Team Member : Lokesh Ahire         ---> Student 1  ---> team.txt & pageLinking 
+              Vivek Kumar Mishra   ---> Student 2  ---> navbar.html
+              Deepak Sharma        ---> Student 3  ---> signup.html
+              Ankit Sharma         ---> Student 4  ---> login.html
+              Shashank Srivastava  ---> Student 5  ---> mens.html
 
 
     
