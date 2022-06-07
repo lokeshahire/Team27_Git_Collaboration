@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navbar</title>
     <style>
-        #navbar{
+        #navbar {
             border-radius: 15px;
             border: 1px solid transparent;
             display: flex;
@@ -14,13 +15,15 @@
             justify-content: space-between;
             background-color: #1d2838;
         }
-        #navbar>div{
+
+        #navbar>div {
             display: flex;
             margin: auto;
             justify-content: space-evenly;
             margin: 0px 15px;
         }
-        #navbar>div>div{
+
+        #navbar>div>div {
             width: 80px;
             display: flex;
             justify-content: center;
@@ -29,35 +32,242 @@
             font-family: Arial, Helvetica, sans-serif;
             font-weight: bolder;
         }
-        #navbar>div>div:hover{
-            background-color:lightslategray;
-            color:brown;
+
+        #navbar>div>div:hover {
+            background-color: lightslategray;
             cursor: pointer;
         }
-        #navbar>div:nth-child(1){
+
+        #navbar>div:nth-child(1) {
             color: white;
             font-weight: bolder;
             width: 80px;
             font-family: Arial, Helvetica, sans-serif;
         }
-        #navbar>div:nth-child(1):hover{
+
+        #navbar>div:nth-child(1):hover {
             background-color: lightslategray;
-            color: brown;
             cursor: pointer;
         }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        #services {
+            width: 95%;
+            margin: auto;
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: repeat(1, 350px);
+            gap: 10px;
+        }
+
+        #services>div {
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            border: 1px solid transparent;
+            border-radius: 5px;
+            transition: transform.5;
+        }
+        #services>div:hover{
+            transform: scale(1.1);
+        }
+
+        #services>div>h2 {
+            padding: 15px;
+            margin-top: -3px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #services>div>p {
+            padding-left: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+            padding-bottom: 30px;
+            margin-top: -20px;
+            color: #899fb4;
+        }
+
+        #services>div>img {
+            width: 100%;
+        }
+
+        #works>div {
+            width: 95%;
+            margin: auto;
+            margin-bottom: 20px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 500px);
+            gap: 50px;
+        }
+
+        #works>div>div {
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            border: 1px solid transparent;
+            transition: transform .5;
+        }
+        #works>div>div:hover{
+            transform: scale(1.1);
+        }
+
+        #works>div>div>h2 {
+            padding-left: 15px;
+            padding-top: 5px;
+            margin-top: -5px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #works>div>div>p {
+            padding-left: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #works>div>div>img {
+            width: 100%;
+            height: 70%;
+        }
+
+        #works>h1 {
+            margin-top: 50px;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #works>p {
+            margin-top: 10px;
+            margin-bottom: 30px;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        button{
+            display: flex;
+            margin: auto;
+            height: 30px;
+            width: 100px;
+            justify-content: center;
+            align-items: center;
+            font-weight: bolder;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-bottom: 50px;
+            border-radius: 10px;
+        }
+        button:hover{
+            background-color: lightblue;
+            border-radius: 10px;
+            border: 1px solid transparent;
+        }
+
     </style>
 </head>
+
 <body>
     <div id="navbar">
         <div>
             <p>Reebok</p>
         </div>
         <div>
-            <div>Men</div>
-            <div>Women</div>
-            <div>Login</div>
-            <div>Signup</div>
+            <div><a href="https://adorable-zabaione-26842b.netlify.app/">Men's</a></div>
+            <div><a href="https://quiet-gelato-5262b2.netlify.app/">Women</a></div>
+            <div><a href="login.html">Login</a></div>
+            <div><a href="signup.html">Signup</a></div>
         </div>
     </div>
+    <div id="services">
+        <div>
+            <img src="https://assets.reebok.com/images/w_276,h_276,f_auto,q_auto,fl_lossy,c_fill,g_auto/72d8cd9e9ca443aeb0caacfb011b3317_9366/Club_C_85_Vintage_Shoes_White_GY4967_01_standard.jpg"
+                alt="jpg">
+            <h2>$85</h2>
+            <p>Club C 85 Vintage Shoes</p>
+        </div>
+        <div>
+            <img src="https://assets.reebok.com/images/w_276,h_276,f_auto,q_auto,fl_lossy,c_fill,g_auto/800a25e2eb104010a007ae7701730794_9366/Looney_Tunes_Classic_Legacy_AZ_Shoes_Grey_GW4301_01_standard.jpg"
+                alt="jpg">
+            <h2>$110</h2>
+            <p>Looney Tunes Classic Legacy AZ Shoes</p>
+        </div>
+        <div>
+            <img src="https://assets.reebok.com/images/w_276,h_276,f_auto,q_auto,fl_lossy,c_fill,g_auto/223764ab31c3472c9e7eadcf0086ecbd_9366/Nano_X1_Froning_Men's_Training_Shoes_White_GX9317_01_standard.jpg"
+                alt="jpg">
+            <h2>$155</h2>
+            <p>Nano X1 Froning Men's Training Shoes</p>
+        </div>
+        <div>
+            <img src="https://assets.reebok.com/images/w_276,h_276,f_auto,q_auto,fl_lossy,c_fill,g_auto/1587d285d9ef43cd8f22adf000e28ae3_9366/Reebok_Nano_X2_Women's_Training_Shoes_Black_GZ0883_01_standard.jpg"
+                alt="jpg">
+            <h2>$135</h2>
+            <p>Reebok Nano X2 Women's Training</p>
+        </div>
+        <div>
+            <img src="https://assets.reebok.com/images/w_276,h_276,f_auto,q_auto,fl_lossy,c_fill,g_auto/b65f057ded59476e9b8dadc800d8d8c7_9366/Reebok_Nano_X2_Men's_Training_Shoes_Black_GW5148_01_standard.jpg"
+                alt="jpg">
+            <h2>$160</h2>
+            <p>Looney Tunes Instapump Fury Zone</p>
+        </div>
+        <div>
+            <img src="https://assets.reebok.com/images/w_276,h_276,f_auto,q_auto,fl_lossy,c_fill,g_auto/020621d49b3a4412a6a7adda010b0709_9366/Instapump_Fury_95_Shoes_White_GZ1615_01_standard.jpg"
+                alt="jpg">
+            <h2>$135</h2>
+            <p>Reebok Nano X2 Men's Training Shoes</p>
+        </div>
+    </div>
+    <div id="works">
+        <h1>FREE SHIPPING, EXCLUSIVES & MORE</h1>
+        <p>You kick it hard with style and fitness. Now get rewarded for it with a loyalty program that gets you.</p>
+        <button>Join Now</button>
+        <div>
+            <div>
+                <img src="https://brand.assets.reebok.com/image/upload/f_auto,q_auto,fl_lossy/reebok_enUS/Images/22SS__NanoX1-Froning_Teaser-Carousel-Card-Background_tcm274-892413.jpg"
+                    alt="jpg">
+                <h2>New Nano X1 Froning</h2>
+                <p>This is elite athlete Rich Froning's take on Nano X1.</p>
+            </div>
+            <div>
+                <img src="https://brand.assets.reebok.com/image/upload/f_auto,q_auto,fl_lossy/reebok_enUS/Images/C23512-ECOM_Teaser_Carousel_LOONEYTUNES_1050x1400-2000690_tcm274-878055.jpg"
+                    alt="jpg">
+                <h2>All You Need, Folks!</h2>
+                <p>Straight from Looney Tunes prop warehouse.</p>
+            </div>
+            <div>
+                <img src="https://brand.assets.reebok.com/image/upload/f_auto,q_auto,fl_lossy/reebok_enUS/Images/22SS_Friends-and-Family-Offer_Teaser-Carousel-Card-Background_tcm274-892269.jpg"
+                    alt="jpg">
+                <h2>30% Off Sitewide + Extra 50% Off Sale</h2>
+                <p>Get summer started with some fresh picks. Build a new look with code SUMMER.</p>
+            </div>
+            <div>
+                <img src="https://brand.assets.reebok.com/image/upload/f_auto,q_auto,fl_lossy/reebok_enUS/Images/22SS_Hiking-Focus_Teaser-Carousel-Card-Background_tcm274-892364.jpg"
+                    alt="jpg">
+                <h2>Off Trail, Run On</h2>
+                <p>Shoes to take you from on road to off trail and to adventures you've yet to experience.</p>
+            </div>
+            <div>
+                <img src="https://brand.assets.reebok.com/image/upload/f_auto,q_auto,fl_lossy/reebok_enUS/Images/SS22_Classic-Leather-White-Gum_Launch_Teaser-Carousel_V1_tcm274-835942.jpg"
+                    alt="jpg">
+                <h2>A Classic Icon</h2>
+                <p>The Classic Leather White Gum. Remind the world who you are.</p>
+            </div>
+            <div>
+                <img src="https://brand.assets.reebok.com/image/upload/f_auto,q_auto,fl_lossy/reebok_enUS/Images/22SS_Floatride-Symmetros_FD_Teaser-Carousel-Card_tcm274-895811.jpg"
+                    alt="jpg">
+                <h2>Walk Comfortably Supportive Shoes</h2>
+                <p>Foam cushioning movies air from heels to toes for targeted comfort.</p>
+            </div>
+            <div>
+                <img src="https://assets.reebok.com/images/w_276,h_276,f_auto,q_auto,fl_lossy,c_fill,g_auto/0de05fc2971f413e8c3dad2c0011b36b_9366/HA6313_01_standard.jpg"
+                    alt="jpg">
+                <h2>Run Day, Your Way</h2>
+                <p>From mile jogs to 5Ks and long runs to intervals, get comfortable cushioned support for your strides.</p>
+            </div>
+            <div>
+                <img src="https://assets.reebok.com/images/w_276,h_276,f_auto,q_auto,fl_lossy,c_fill,g_auto/1476f12ba67242abb0e4ad26006f2b36_9366/GS6580_01_standard.jpg"
+                    alt="jpg">
+                <h2>New Nano X1</h2>
+                <p>This is elite athlete Rich Froning's take on Nano X1.</p>
+            </div>
+        </div>
+    </div>
+    </div>
 </body>
+
 </html>
