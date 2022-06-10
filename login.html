@@ -1,81 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
-</head>
-<style>
-   .box {
-       /* border: 1px solid red; */
-       width: 300px;
-       height: 500px;
-       text-align: center;
-       margin: auto;
-       border-radius: 10px;
-       justify-content: center;
-       align-items: center;
-       background-color: rgb(199, 234, 222);
-       box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;;
-   }
-   .box>h2{
-       padding: 30px 30px 30px 30px;
-       font-size: 40px;
-       
-       
-       
-   }
-   #mail {
-     width: 220px;
-     margin: 30px 30px 10px 30px;
-     border-radius: 6px;
-
-   }
-   #pass {
-     width: 220px;
-     margin: 11px 11px 11px 11px;
-     border-style:line;
-     border-radius: 5px;
-   }
-   #but {
-       width: 230px;
-       height:35px;
-       margin-top: 20px;
-       background-color: #255078;
-       border-radius: 4px;
-       color: white;
-       
-   }
-   #passo {
-       margin-top:50px;
-       font-size: 14px;  
-   }
-   #signo {
-       font-size: 14px;
-   }
-</style>
-<body>
+  </head>
+  <style>
+    .box {
+      /* border: 1px solid red; */
+      width: 300px;
+      height: 500px;
+      text-align: center;
+      margin: auto;
+      border-radius: 10px;
+      justify-content: center;
+      align-items: center;
+      background-color: rgb(199, 234, 222);
+      box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+        rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+        rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    }
+    .box > h2 {
+      padding: 30px 30px 30px 30px;
+      font-size: 40px;
+    }
+    #mail {
+      width: 220px;
+      margin: 30px 30px 10px 30px;
+      border-radius: 6px;
+    }
+    #pass {
+      width: 220px;
+      margin: 11px 11px 11px 11px;
+      border-style: line;
+      border-radius: 5px;
+    }
+    #but {
+      width: 230px;
+      height: 35px;
+      margin-top: 20px;
+      background-color: #255078;
+      border-radius: 4px;
+      color: white;
+    }
+    #passo {
+      margin-top: 50px;
+      font-size: 14px;
+    }
+    #signo {
+      font-size: 14px;
+    }
+  </style>
+  <body>
     <div class="box">
-    <h2>Login</h2>
-    <input type="text" name="name" id="mail" placeholder="Email">
-    <input type="number" placeholder="Password" id="pass">
-    <button onclick="myFunction()" id="but">Login</button>
-    <p id="passo">Forgot <a href="https://www.google.com/" target="_blank">Password?</a></p>
-    
-    <p id="signo">Don't have an account?<a href="https://www.google.com/" target="_blank">Sign up</a></p>
-    <p id="new"><a href="https://course.masaischool.com/dashboard" target="_blank"></a></p>
+      <h2>Login</h2>
+      <input type="text" name="name" id="mail" placeholder="Email" />
+      <input type="number" placeholder="Password" id="pass" />
+      <button onclick="myFunction()" id="but">Login</button>
+      <p id="passo">
+        Forgot <a href="https://www.google.com/" target="_blank">Password?</a>
+      </p>
+
+      <p id="signo">
+        Don't have an account?<a href="https://www.google.com/" target="_blank"
+          >Sign up</a
+        >
+      </p>
+      <p id="new">
+        <a href="https://course.masaischool.com/dashboard" target="_blank"></a>
+      </p>
     </div>
-</body>
+  </body>
 </html>
 
 <script>
-    function myFunction(){
-     let x=document.getElementById("mail").value
-     let y=document.getElementById("pass").value
-     alert("sign-in successful")
-     
-    }
-    
-   
+  function myFunction() {
+    let x = document.getElementById("mail").value;
+    let y = document.getElementById("pass").value;
+    alert("sign-in successful");
+    window.location.href = "navbar.html";
+  }
 </script>

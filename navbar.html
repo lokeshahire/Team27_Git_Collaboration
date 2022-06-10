@@ -11,9 +11,12 @@
             border-radius: 15px;
             border: 1px solid transparent;
             display: flex;
-            margin: auto;
+            /* margin: auto; */
             justify-content: space-between;
             background-color: #1d2838;
+            position: fixed;
+            width: 100%;
+            margin-top: -100px;
         }
 
         #navbar>div {
@@ -55,92 +58,6 @@
             text-decoration: none;
         }
 
-        #services {
-            width: 95%;
-            margin: auto;
-            margin-top: 30px;
-            display: grid;
-            grid-template-columns: repeat(6, 1fr);
-            grid-template-rows: repeat(1, 350px);
-            gap: 10px;
-        }
-
-        #services>div {
-            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-            border: 1px solid transparent;
-            border-radius: 5px;
-            transition: transform.5;
-        }
-        #services>div:hover{
-            transform: scale(1.1);
-        }
-
-        #services>div>h2 {
-            padding: 15px;
-            margin-top: -3px;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        #services>div>p {
-            padding-left: 15px;
-            font-family: Arial, Helvetica, sans-serif;
-            padding-bottom: 30px;
-            margin-top: -20px;
-            color: #899fb4;
-        }
-
-        #services>div>img {
-            width: 100%;
-        }
-
-        #works>div {
-            width: 95%;
-            margin: auto;
-            margin-bottom: 20px;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            grid-template-rows: repeat(2, 500px);
-            gap: 50px;
-        }
-
-        #works>div>div {
-            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-            border: 1px solid transparent;
-            transition: transform .5;
-        }
-        #works>div>div:hover{
-            transform: scale(1.1);
-        }
-
-        #works>div>div>h2 {
-            padding-left: 15px;
-            padding-top: 5px;
-            margin-top: -5px;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        #works>div>div>p {
-            padding-left: 15px;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        #works>div>div>img {
-            width: 100%;
-            height: 70%;
-        }
-
-        #works>h1 {
-            margin-top: 50px;
-            text-align: center;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        #works>p {
-            margin-top: 10px;
-            margin-bottom: 30px;
-            text-align: center;
-            font-family: Arial, Helvetica, sans-serif;
-        }
         button{
             display: flex;
             margin: auto;
@@ -152,13 +69,144 @@
             font-family: Arial, Helvetica, sans-serif;
             margin-bottom: 50px;
             border-radius: 10px;
+            color: rgb(250, 250, 250);
+
         }
         button:hover{
             background-color: lightblue;
             border-radius: 10px;
             border: 1px solid transparent;
+             color: red;
+                  font-family: Arial, Helvetica, sans-serif;
+        }
+          img:hover{
+        cursor: pointer;   
+        box-shadow: 0px 35px 20px rgba(230, 73, 73, 0.874);
+         background-color: aqua;
+        }
+        
+    
+ .divbtn{
+        background-color: rgb(134, 134, 202);
+            position: absolute;
+            width: 10%;
+            height: 50px;
+            margin-bottom: -90px;
+            border: none;
+       }
+
+
+
+       #products {
+            width: 80%;
+            height: auto;
+            display: grid;
+            grid-template-columns: repeat(4, auto);
+            grid-template-rows: repeat(5, auto);
+            gap: 25px;
+            margin: auto;
+            margin-top: 100px;
         }
 
+        #products>div {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            text-align: center;
+            border-radius: 20px;
+      
+            box-shadow: 0px 4px 6px -1px rgb(0 0 0 / 10%), 0px 2px 4px -1px rgb(0 0 0 / 6%);
+        }
+
+        div>img:first-child {
+            width: 100%;
+             
+        }
+
+        div>h2 {
+            font-size: larger;
+            margin-top: 2%;
+            font-weight: 700;
+            overflow: hidden;
+               
+        }
+
+        div>h2+p {
+            color: #54444f;
+            font-size: 16px;
+            margin-top: -10px;
+        }
+
+        p+img{
+            margin-top:-5%;
+            width: 40%;
+        }
+
+        @media all and (min-width: 767px) and (max-width:1028px){
+
+            #products{
+                width: 100%;
+                grid-template-columns: repeat(3,1fr);
+                grid-template-rows: repeat(7,auto);
+                gap: 25px;
+            }
+
+            div>h2{
+                font-size: 14px;
+                margin-top: 2%;
+                font-weight: 700;
+            }
+
+            div>p{
+                font-size: 14px;
+                margin-top: -10px;
+            
+            }
+
+            p+img{
+                margin-top:-5%;
+                width: 40%;
+            }        
+        }
+
+        @media all and (min-width: 9px) and (max-width: 766px){
+            #products{
+                width: 100%;
+                grid-template-columns: repeat(2,1fr);
+                grid-template-rows: repeat(10,auto);
+                gap: 25px;
+            }
+
+            div{
+                text-align: center;
+                overflow: hidden;
+                border-radius: 8px;
+                box-shadow: 0px 4px 6px -1px rgb(0 0 0 / 10%), 0px 2px 4px -1px rgb(0 0 0 / 6%);
+            }
+
+            div>h2{
+                font-size: 14px;
+                margin-top: 2%;
+                font-weight: 700;
+            }
+
+            div>p{
+                font-size: 14px;
+                margin-top: -10px;
+            
+            }
+
+            p+img{
+                margin-top:-5%;
+                width: 40%;
+            }
+
+        }
+      
     </style>
 </head>
 
@@ -168,106 +216,521 @@
             <p>Reebok</p>
         </div>
         <div>
-            <div><a href="https://adorable-zabaione-26842b.netlify.app/">Men's</a></div>
-            <div><a href="https://quiet-gelato-5262b2.netlify.app/">Women</a></div>
+            <div>Men's</a></div>
+            <div>Women</a></div>
             <div><a href="login.html">Login</a></div>
             <div><a href="signup.html">Signup</a></div>
         </div>
     </div>
-    <div id="services">
-        <div>
-            <img src="https://assets.reebok.com/images/w_276,h_276,f_auto,q_auto,fl_lossy,c_fill,g_auto/72d8cd9e9ca443aeb0caacfb011b3317_9366/Club_C_85_Vintage_Shoes_White_GY4967_01_standard.jpg"
-                alt="jpg">
-            <h2>$85</h2>
-            <p>Club C 85 Vintage Shoes</p>
-        </div>
-        <div>
-            <img src="https://assets.reebok.com/images/w_276,h_276,f_auto,q_auto,fl_lossy,c_fill,g_auto/800a25e2eb104010a007ae7701730794_9366/Looney_Tunes_Classic_Legacy_AZ_Shoes_Grey_GW4301_01_standard.jpg"
-                alt="jpg">
-            <h2>$110</h2>
-            <p>Looney Tunes Classic Legacy AZ Shoes</p>
-        </div>
-        <div>
-            <img src="https://assets.reebok.com/images/w_276,h_276,f_auto,q_auto,fl_lossy,c_fill,g_auto/223764ab31c3472c9e7eadcf0086ecbd_9366/Nano_X1_Froning_Men's_Training_Shoes_White_GX9317_01_standard.jpg"
-                alt="jpg">
-            <h2>$155</h2>
-            <p>Nano X1 Froning Men's Training Shoes</p>
-        </div>
-        <div>
-            <img src="https://assets.reebok.com/images/w_276,h_276,f_auto,q_auto,fl_lossy,c_fill,g_auto/1587d285d9ef43cd8f22adf000e28ae3_9366/Reebok_Nano_X2_Women's_Training_Shoes_Black_GZ0883_01_standard.jpg"
-                alt="jpg">
-            <h2>$135</h2>
-            <p>Reebok Nano X2 Women's Training</p>
-        </div>
-        <div>
-            <img src="https://assets.reebok.com/images/w_276,h_276,f_auto,q_auto,fl_lossy,c_fill,g_auto/b65f057ded59476e9b8dadc800d8d8c7_9366/Reebok_Nano_X2_Men's_Training_Shoes_Black_GW5148_01_standard.jpg"
-                alt="jpg">
-            <h2>$160</h2>
-            <p>Looney Tunes Instapump Fury Zone</p>
-        </div>
-        <div>
-            <img src="https://assets.reebok.com/images/w_276,h_276,f_auto,q_auto,fl_lossy,c_fill,g_auto/020621d49b3a4412a6a7adda010b0709_9366/Instapump_Fury_95_Shoes_White_GZ1615_01_standard.jpg"
-                alt="jpg">
-            <h2>$135</h2>
-            <p>Reebok Nano X2 Men's Training Shoes</p>
-        </div>
+    <div id="products">
     </div>
-    <div id="works">
-        <h1>FREE SHIPPING, EXCLUSIVES & MORE</h1>
-        <p>You kick it hard with style and fitness. Now get rewarded for it with a loyalty program that gets you.</p>
-        <button>Join Now</button>
-        <div>
-            <div>
-                <img src="https://brand.assets.reebok.com/image/upload/f_auto,q_auto,fl_lossy/reebok_enUS/Images/22SS__NanoX1-Froning_Teaser-Carousel-Card-Background_tcm274-892413.jpg"
-                    alt="jpg">
-                <h2>New Nano X1 Froning</h2>
-                <p>This is elite athlete Rich Froning's take on Nano X1.</p>
-            </div>
-            <div>
-                <img src="https://brand.assets.reebok.com/image/upload/f_auto,q_auto,fl_lossy/reebok_enUS/Images/C23512-ECOM_Teaser_Carousel_LOONEYTUNES_1050x1400-2000690_tcm274-878055.jpg"
-                    alt="jpg">
-                <h2>All You Need, Folks!</h2>
-                <p>Straight from Looney Tunes prop warehouse.</p>
-            </div>
-            <div>
-                <img src="https://brand.assets.reebok.com/image/upload/f_auto,q_auto,fl_lossy/reebok_enUS/Images/22SS_Friends-and-Family-Offer_Teaser-Carousel-Card-Background_tcm274-892269.jpg"
-                    alt="jpg">
-                <h2>30% Off Sitewide + Extra 50% Off Sale</h2>
-                <p>Get summer started with some fresh picks. Build a new look with code SUMMER.</p>
-            </div>
-            <div>
-                <img src="https://brand.assets.reebok.com/image/upload/f_auto,q_auto,fl_lossy/reebok_enUS/Images/22SS_Hiking-Focus_Teaser-Carousel-Card-Background_tcm274-892364.jpg"
-                    alt="jpg">
-                <h2>Off Trail, Run On</h2>
-                <p>Shoes to take you from on road to off trail and to adventures you've yet to experience.</p>
-            </div>
-            <div>
-                <img src="https://brand.assets.reebok.com/image/upload/f_auto,q_auto,fl_lossy/reebok_enUS/Images/SS22_Classic-Leather-White-Gum_Launch_Teaser-Carousel_V1_tcm274-835942.jpg"
-                    alt="jpg">
-                <h2>A Classic Icon</h2>
-                <p>The Classic Leather White Gum. Remind the world who you are.</p>
-            </div>
-            <div>
-                <img src="https://brand.assets.reebok.com/image/upload/f_auto,q_auto,fl_lossy/reebok_enUS/Images/22SS_Floatride-Symmetros_FD_Teaser-Carousel-Card_tcm274-895811.jpg"
-                    alt="jpg">
-                <h2>Walk Comfortably Supportive Shoes</h2>
-                <p>Foam cushioning movies air from heels to toes for targeted comfort.</p>
-            </div>
-            <div>
-                <img src="https://assets.reebok.com/images/w_276,h_276,f_auto,q_auto,fl_lossy,c_fill,g_auto/0de05fc2971f413e8c3dad2c0011b36b_9366/HA6313_01_standard.jpg"
-                    alt="jpg">
-                <h2>Run Day, Your Way</h2>
-                <p>From mile jogs to 5Ks and long runs to intervals, get comfortable cushioned support for your strides.</p>
-            </div>
-            <div>
-                <img src="https://assets.reebok.com/images/w_276,h_276,f_auto,q_auto,fl_lossy,c_fill,g_auto/1476f12ba67242abb0e4ad26006f2b36_9366/GS6580_01_standard.jpg"
-                    alt="jpg">
-                <h2>New Nano X1</h2>
-                <p>This is elite athlete Rich Froning's take on Nano X1.</p>
-            </div>
-        </div>
-    </div>
-    </div>
+
+   
 </body>
 
 </html>
+
+
+<script>
+    var data =[
+    {image :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000009769043-Red-Maroon-1000009769043-12082020_01-2100.jpg",
+   
+    price:"799",
+    color:"Red",
+    name:"Textured Short Kurta with Pocket"},
+    
+    {image :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010324470-Blue-Navy-1000010324470-8272021_01-2100.jpg",
+    
+    price:"899",
+    color:"Red",
+    name:"Printed Full Sleeves Kurta"},
+    
+    {image :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000009769004-Blue-Blue-1000009769004-12082020_01-2100.jpg",
+    
+    price:"899",
+    color:"Red",
+    name:" Solid Band-Collar Shirt Kurta"},
+    
+    {image :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571700-Orange-Orange-1000010571700-10202021_01-2100.jpg",
+   
+    price:"799",
+    color:"Red",
+    name:" Solid Regular Fit Short Kurta"},
+    
+    {image :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010324612-White-White-1000010324612-8052021_01-2100.jpg",
+    
+    price:"999",
+    color:"Red",
+    name:" Striped Full Sleeves Short Kurta"},
+    
+    {image :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571613-Blue-Blue-1000010571613-10072021_01-2100.jpg",
+    
+    price:"999",
+    color:"Red",
+    name:" Striped Band Collar Short Kurta"},
+    
+    {image :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010071226-Orange-Orange-1000010071226-7222021_01-2100.jpg",
+   
+    price:"899",
+    color:"Red",
+    arriv:"new",
+    name:" Printed Short Kurta"},
+    
+    {image :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571700-Red-Red-1000010571700-10072021_01-2100.jpg",
+   
+    price:"799",
+    color:"Red",
+    name:" Solid Short Straight Kurta"},
+    
+    {image :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571742-Red-Maroon-1000010571742-9292021_01-2100.jpg",
+    
+    price:"799",
+    color:"Red",
+    name:" Solid Short Kurta"},
+    
+    {image :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571700-White-White-1000010571700-10072021_01-2100.jpg",
+    
+    price:"899",
+    color:"Red",
+    arriv: "new",
+    name:" Solid Short Straight Kurta"},
+    
+    {image :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010324560-Orange-Rust-1000010324560-8272021_01-2100.jpg",
+   
+    price:"999",
+    color:"Red",
+    name:" Printed Full Sleeves Kurta"},
+    
+    {image :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571667-Red-Maroon-1000010571667-10072021_01-2100.jpg",
+   
+    price:"799",
+    color:"Red",
+    name:" Printed Full Sleeves Short Kurta"},
+    
+    {image :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010519112-Beige-Beige-1000010519112-9292021_01-2100.jpg",
+   
+    price:"799",
+    color:"Red",
+    name:" Solid Band Collar Short Kurta"},
+    
+    {image :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010071109-Beige-OffWhite-1000010071109-7222021_01-2100.jpg",
+  
+    price:"899",
+    color:"Red",
+    name:" Striped Short Kurta"},
+    
+    {image :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010071135-Orange-Rustc-1000010071135-7072021_01-2100.jpg",
+   
+    price:"999",
+    color:"Red",
+    arriv: "new",
+    name:" Printed Full Sleeves Short Kurta"},
+    
+    {image :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010122132-White-White-1000010122132-2202021_01-2100.jpg",
+    
+    price:"799",
+    color:"Red",
+    name:" Solid Shirt Kurta with Band Collar"},
+    
+    {image :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000009769030-Green-Oliveg-1000009769030-12162020_01-2100.jpg",
+    
+    price:"999",
+    color:"Red",
+    name:" Textured Full Sleeves Kurta"},
+    
+    {image :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010324470-Green-Oliveg-1000010324470-8272021_01-2100.jpg",
+   
+    price:"1299",
+    color:"Red",
+    name:" Printed Full Sleeves Kurta"},
+    
+    {image :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010071239-Blue-Navy-1000010071239-7072021_01-2100.jpg",
+   
+    price:"799",
+    color:"Red",
+    arriv:"new",
+    name:" Solid Full Sleeves Short Kurta"},
+    
+    {image :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010141354-Beige-Beige-1000010141354-8052021_01-2100.jpg",
+    
+    price:"899",
+    color:"Red",
+    name:" Printed Slim Fit Kurta"},
+    
+    {image :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000009769043-Red-Maroon-1000009769043-12082020_01-2100.jpg",
+   
+    price:"799",
+    color:"Red",
+    name:" Textured Short Kurta with Patch Pocket"},
+    
+    {image :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010324470-Blue-Navy-1000010324470-8272021_01-2100.jpg",
+    
+    price:"899",
+    color:"Red",
+    name:" Printed Full Sleeves Kurta"},
+    
+    {image :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000009769004-Blue-Blue-1000009769004-12082020_01-2100.jpg",
+    
+    price:"899",
+    color:"Red",
+    arriv:"new",
+    name:" Solid Band-Collar Shirt Kurta"},
+    
+    {image :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571700-Orange-Orange-1000010571700-10202021_01-2100.jpg",
+   
+    price:"799",
+    color:"Red",
+    name:" Solid Regular Fit Short Kurta"},
+    
+    {image :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010324612-White-White-1000010324612-8052021_01-2100.jpg",
+   
+    price:"999",
+    color:"Red",
+    name:" Striped Full Sleeves Short Kurta"},
+    
+    {image :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571613-Blue-Blue-1000010571613-10072021_01-2100.jpg",
+   
+    price:"999",
+    color:"Red",
+    name:" Striped Band Collar Short Kurta"},
+    
+    {image :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010071226-Orange-Orange-1000010071226-7222021_01-2100.jpg",
+   
+    price:"899",
+    color:"Red",
+    name:" Printed Short Kurta"},
+    
+    {image :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571700-Red-Red-1000010571700-10072021_01-2100.jpg",
+   
+    price:"799",
+    color:"Red",
+    arriv: "new",
+    name:" Solid Short Straight Kurta"},
+    
+    {image :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571742-Red-Maroon-1000010571742-9292021_01-2100.jpg",
+  
+    price:"799",
+    color:"Red",
+    name:" Solid Short Kurta"},
+    
+    {image :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571700-White-White-1000010571700-10072021_01-2100.jpg",
+   
+    price:"899",
+    color:"Red",
+    name:" Solid Short Straight Kurta"},
+    
+    {image :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010324560-Orange-Rust-1000010324560-8272021_01-2100.jpg",
+   
+    price:"999",
+    color:"Red",
+    name:" Printed Full Sleeves Kurta"},
+    
+    {image :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571667-Red-Maroon-1000010571667-10072021_01-2100.jpg",
+    
+    price:"799",
+    color:"Red",
+    arriv:"new",
+    name:" Printed Full Sleeves Short Kurta"},
+    
+    {image :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010519112-Beige-Beige-1000010519112-9292021_01-2100.jpg",
+   
+    price:"799",
+    color:"Red",
+    name:" Solid Band Collar Short Kurta"},
+    
+    {image :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010071109-Beige-OffWhite-1000010071109-7222021_01-2100.jpg",
+   
+    price:"899",
+    color:"Red",
+    name:" Striped Short Kurta"},
+    
+    {image :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010071135-Orange-Rustc-1000010071135-7072021_01-2100.jpg",
+   
+    price:"999",
+    color:"Red",
+    name:" Printed Full Sleeves Short Kurta"},
+    
+    {image :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010122132-White-White-1000010122132-2202021_01-2100.jpg",
+   
+    price:"799",
+    color:"Red",
+    name:" Solid Shirt Kurta with Band Collar"},
+    
+    {image :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000009769030-Green-Oliveg-1000009769030-12162020_01-2100.jpg",
+    
+    price:"999",
+    color:"Red",
+    name:" Textured Full Sleeves Kurta"},
+    
+    {image :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010324470-Green-Oliveg-1000010324470-8272021_01-2100.jpg",
+   
+    price:"1299",
+    color:"Red",
+    arriv:"new",
+    name:" Printed Full Sleeves Kurta"},
+    
+    {image :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010071239-Blue-Navy-1000010071239-7072021_01-2100.jpg",
+   
+    price:"799",
+    color:"Red",
+    name:" Solid Full Sleeves Short Kurta"},
+    
+    {image :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010141354-Beige-Beige-1000010141354-8052021_01-2100.jpg",
+   
+    price:"899",
+    color:"Red",
+    name:" Printed Slim Fit Kurta"},
+    
+    {image :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000009769043-Red-Maroon-1000009769043-12082020_01-2100.jpg",
+   
+    price:"799",
+    color:"Red",
+    name:" Textured Short Kurta with Patch Pocket"},
+    
+    {image :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010324470-Blue-Navy-1000010324470-8272021_01-2100.jpg",
+   
+    price:"899",
+    color:"Red",
+    name:" Printed Full Sleeves Kurta"},
+    
+    {image :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000009769004-Blue-Blue-1000009769004-12082020_01-2100.jpg",
+   
+    price:"899",
+    color:"Red",
+    name:" Solid Band-Collar Shirt Kurta"},
+    
+    {image :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571700-Orange-Orange-1000010571700-10202021_01-2100.jpg",
+    
+    price:"799",
+    color:"Red",
+    name:" Solid Regular Fit Short Kurta"},
+    
+    {image :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010324612-White-White-1000010324612-8052021_01-2100.jpg",
+    
+    price:"999",
+    color:"Red",
+    arriv: "new",
+    name:" Striped Full Sleeves Short Kurta"},
+    
+    {image :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571613-Blue-Blue-1000010571613-10072021_01-2100.jpg",
+  
+    price:"999",
+    color:"Red",
+    name:" Striped Band Collar Short Kurta"},
+    
+    {image :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010071226-Orange-Orange-1000010071226-7222021_01-2100.jpg",
+    
+    price:"899",
+    color:"Red",
+    name:" Printed Short Kurta"},
+    
+    {image :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571700-Red-Red-1000010571700-10072021_01-2100.jpg",
+    
+    price:"799",
+    color:"Red",
+    name:" Solid Short Straight Kurta"},
+    
+    {image :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571742-Red-Maroon-1000010571742-9292021_01-2100.jpg",
+    
+    price:"799",
+    color:"Red",
+    name:" Solid Short Kurta"},
+    
+    {image :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571700-White-White-1000010571700-10072021_01-2100.jpg",
+    
+    price:"899",
+    color:"Red",
+    name:" Solid Short Straight Kurta"},
+    
+    {image :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010324560-Orange-Rust-1000010324560-8272021_01-2100.jpg",
+    
+    price:"999",
+    color:"Red",
+    name:" Printed Full Sleeves Kurta"},
+    
+    {image :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571667-Red-Maroon-1000010571667-10072021_01-2100.jpg",
+    
+    price:"799",
+    color:"Red",
+    name:" Printed Full Sleeves Short Kurta"},
+    
+    {image :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010519112-Beige-Beige-1000010519112-9292021_01-2100.jpg",
+    
+    price:"799",
+    color:"Red",
+    name:" Solid Band Collar Short Kurta"},
+    
+    {image :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010071109-Beige-OffWhite-1000010071109-7222021_01-2100.jpg",
+    
+    price:"899",
+    color:"Red",
+    name:" Striped Short Kurta"},
+    
+    {image :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010071135-Orange-Rustc-1000010071135-7072021_01-2100.jpg",
+   price:"999",
+    color:"Red",
+    name:" Printed Full Sleeves Short Kurta"},
+    
+    {image :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010122132-White-White-1000010122132-2202021_01-2100.jpg",
+    price:"799",
+    color:"Red",
+    name:" Solid Shirt Kurta with Band Collar"},
+    
+    {image :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000009769030-Green-Oliveg-1000009769030-12162020_01-2100.jpg",
+    price:"999",
+    color:"Red",
+    name:" Textured Full Sleeves Kurta"},
+    
+    {image :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010324470-Green-Oliveg-1000010324470-8272021_01-2100.jpg",
+    price:"1299",
+    color:"Red",
+    name:" Printed Full Sleeves Kurta"},
+    
+    {image :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010071239-Blue-Navy-1000010071239-7072021_01-2100.jpg",
+    price:"799",
+    color:"Red",
+    name:" Solid Full Sleeves Short Kurta"},
+    
+    {image :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010141354-Beige-Beige-1000010141354-8052021_01-2100.jpg",
+    price:"899",
+    color:"Red",
+    name:" Printed Slim Fit Kurta"},
+    
+    {image :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000009769043-Red-Maroon-1000009769043-12082020_01-2100.jpg",
+    price:"799",
+    color:"Red",
+    name:" Textured Short Kurta with Patch Pocket"},
+    
+    {image :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010324470-Blue-Navy-1000010324470-8272021_01-2100.jpg",
+   price:"899",
+    color:"Red",
+    name:" Printed Full Sleeves Kurta"},
+    
+    {image :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000009769004-Blue-Blue-1000009769004-12082020_01-2100.jpg",
+    price:"899",
+    color:"Red",
+    name:" Solid Band-Collar Shirt Kurta"},
+    
+    {image :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571700-Orange-Orange-1000010571700-10202021_01-2100.jpg",
+   price:"799",
+    color:"Red",
+    name:" Solid Regular Fit Short Kurta"},
+    
+    {image :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010324612-White-White-1000010324612-8052021_01-2100.jpg",
+    price:"999",
+    color:"Red",
+    name:" Striped Full Sleeves Short Kurta"},
+    
+    {image :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571613-Blue-Blue-1000010571613-10072021_01-2100.jpg",
+    price:"999",
+    color:"Red",
+    name:" Striped Band Collar Short Kurta"},
+    
+    {image :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010071226-Orange-Orange-1000010071226-7222021_01-2100.jpg",
+    price:"899",
+    color:"Red",
+    name:"Printed Short Kurta"},
+    
+    {image :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571700-Red-Red-1000010571700-10072021_01-2100.jpg",
+    price:"799",
+    color:"Red",
+    name:"Solid Short Straight Kurta"},
+    
+    {image :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571742-Red-Maroon-1000010571742-9292021_01-2100.jpg",
+    price:"799",
+    color:"Red",
+    name:"Solid Short Kurta"},
+    
+    {image :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571700-White-White-1000010571700-10072021_01-2100.jpg",
+    price:"899",
+    color:"Red",
+    name:"Solid Short Straight Kurta"},
+    
+    {image :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010324560-Orange-Rust-1000010324560-8272021_01-2100.jpg",
+   price:"999",
+    color:"Red",
+    name:"Printed Full Sleeves Kurta"},
+    
+    {image :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010571667-Red-Maroon-1000010571667-10072021_01-2100.jpg",
+   price:"799",
+    color:"Red",
+    name:"Printed Full Sleeves Short Kurta"},
+    
+    {image :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010519112-Beige-Beige-1000010519112-9292021_01-2100.jpg",
+    price:"799",
+    color:"Red",
+    name:"Solid Band Collar Short Kurta"},
+    
+    {image :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010071109-Beige-OffWhite-1000010071109-7222021_01-2100.jpg",
+  price:"899",
+    color:"Red",
+    name:"Striped Short Kurta"},
+    
+    {image :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010071135-Orange-Rustc-1000010071135-7072021_01-2100.jpg",
+   price:"999",
+    color:"Red",
+    name:"Printed Full Sleeves Short Kurta"},
+    
+    {image :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010122132-White-White-1000010122132-2202021_01-2100.jpg",
+    price:"799",
+    color:"Red",
+    name:" Solid Shirt Kurta with Band Collar"},
+    
+    {image :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000009769030-Green-Oliveg-1000009769030-12162020_01-2100.jpg",
+    price:"999",
+    color:"Red",
+    name:"Textured Full Sleeves Kurta"},
+    
+    {image :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010324470-Green-Oliveg-1000010324470-8272021_01-2100.jpg",
+    price:"1299",
+    color:"Red",
+    name:" Printed Full Sleeves Kurta"},
+    
+    {image :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010071239-Blue-Navy-1000010071239-7072021_01-2100.jpg",
+    price:"799",
+    color:"Red",
+    name:" Solid Full Sleeves Short Kurta"},
+    
+    {image :"https://lmsin.net/cdn-cgi/image/h=831,w=615,q=90,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000010141354-Beige-Beige-1000010141354-8052021_01-2100.jpg",
+    price:"899",
+    color:"Red",
+    name:"MX Printed Slim Fit Kurta"}
+
+    ]
+
+
+
+data.forEach(function(element){
+   
+     let box = document.createElement("div");
+      box.setAttribute("class","box")
+    let image = document.createElement("img");
+        image.setAttribute("src", element.image)
+    let name = document.createElement("h2")
+        name.innerText = element.name;
+    let color = document.createElement("h3")
+        color.innerText = element.color;
+    let price = document.createElement("h3")
+        price.innerText = element.price;
+            
+  let btn= document.createElement("button")
+            btn.setAttribute("class","divbtn")
+          btn.style.display = "none"
+
+        box.addEventListener("mouseover", function(){
+              btn.style.display = "grid"
+            btn.textContent = "ADD TO BASKET";
+        })
+        box.addEventListener("mouseleave", function(){
+                   btn.style.display = "none"
+                 
+        })
+    
+
+  box.append(image,name,color,price,btn)
+    document.querySelector("#products").append(box)
+
+
+})
+
+</script>
